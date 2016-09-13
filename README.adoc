@@ -1,0 +1,3 @@
+= DeskOS: gnome-shell-theme-deskos RPM
+
+This is the _gnome-shell-theme-deskos_ RPM package for the *DeskOS* operating system.
