@@ -1,6 +1,6 @@
 Name:           gnome-shell-theme-deskos
 Version:        0.1
-Release:        1
+Release:        1%{?dist}
 Summary:        GNOME Shell theme for DeskOS
 
 Group:          User Interface/Desktops
