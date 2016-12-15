@@ -1,0 +1,13 @@
+diff -Naur gnome-shell-theme-deskos-0.2.orig/gnome-shell/gnome-shell.css gnome-shell-theme-deskos-0.2/gnome-shell/gnome-shell.css
+--- gnome-shell-theme-deskos-0.2.orig/gnome-shell/gnome-shell.css	2016-12-14 16:55:47.000000000 -0500
++++ gnome-shell-theme-deskos-0.2/gnome-shell/gnome-shell.css	2016-12-14 17:22:44.740673868 -0500
+@@ -714,8 +714,7 @@
+ }
+ 
+ .panel-logo-icon {
+-  padding-right: .4em;
+-  icon-size: 1em;
++  width: 0;
+ }
+ 
+ .panel-menu {

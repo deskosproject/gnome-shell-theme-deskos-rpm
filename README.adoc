@@ -1,3 +1,37 @@
 = DeskOS: gnome-shell-theme-deskos RPM
 
 This is the _gnome-shell-theme-deskos_ RPM package for the *DeskOS* operating system.
+
+
+== Introduction
+
+This is the default DeskOS GNOME Shell theme.
+It contains the default GNOME 3.14.4 theme extracted from the original _gnome-shell_ upstream package.
+It includes a patch to hide the upstream logo from GNOME Shell.
+
+
+== How to create the SOURCES/gnome-shell-theme-deskos-0.2.tar.xz file
+
+To create the _SOURCES/gnome-shell-theme-deskos-0.2.tar.xz_ file we did this:
+
+----
+# Get the upstream sources
+git clone  https://git.centos.org/git/rpms/gnome-shell.git
+cd gnome-shell
+git checkout c7
+
+# Get the GNOME 3.14.4 source code
+wget -O SOURCES/gnome-shell-3.14.4.tar.xz https://download.gnome.org/sources/gnome-shell/3.14/gnome-shell-3.14.4.tar.xz
+
+# Just unpack and patch
+rpmbuild --define "%_topdir `pwd`" --nodeps -bp SPECS/gnome-shell.spec
+
+# Copy the patched GNOME theme and compress it
+cd ..
+mkdir -p gnome-shell-theme-deskos-0.2/gnome-shell/
+cp -p gnome-shell/BUILD/gnome-shell-3.14.4/data/theme/*.{css,png,svg} gnome-shell-theme-deskos-0.2/gnome-shell/
+tar cJf SOURCES/gnome-shell-theme-deskos-0.2.tar.xz gnome-shell-theme-deskos-0.2
+
+# Delete the git repo and temp dir
+rm -rf gnome-shell/ gnome-shell-theme-deskos-0.2/
+----
