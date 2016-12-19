@@ -1,0 +1,11 @@
+diff -Naur gnome-shell-theme-deskos-0.2.orig/gnome-shell/gnome-shell.css gnome-shell-theme-deskos-0.2/gnome-shell/gnome-shell.css
+--- gnome-shell-theme-deskos-0.2.orig/gnome-shell/gnome-shell.css	2016-12-14 20:17:44.000000000 -0500
++++ gnome-shell-theme-deskos-0.2/gnome-shell/gnome-shell.css	2016-12-18 23:42:55.473283334 -0500
+@@ -1497,6 +1497,7 @@
+ .events-day-time {
+     color: #fff;
+     text-align: right;
++    width: 60px;
+ }
+ 
+ .events-day-time-ellipses {
